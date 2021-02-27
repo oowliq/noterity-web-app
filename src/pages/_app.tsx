@@ -15,9 +15,14 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
             <ThemeProvider theme={lightTheme}>
                 <GlobalStyles />
                 <Head>
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link
+                        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
                         rel="stylesheet"
-                        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+                    />
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+                        rel="stylesheet"
                     />
                     <meta name="viewport" content="width=device-width, maximum-scale=1.0, shrink-to-fit=no" />
                 </Head>

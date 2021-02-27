@@ -10,7 +10,7 @@ const base = css`
     }
 
     * {
-        font-family: Roboto;
+        font-family: 'Nunito';
     }
 
     html,
