@@ -11,6 +11,11 @@ const base = css`
 
     * {
         font-family: 'Nunito';
+        color: ${(props) => props.theme.pallete.default};
+    }
+
+    body {
+        background-color: ${(props) => props.theme.pallete.background};
     }
 
     html,
