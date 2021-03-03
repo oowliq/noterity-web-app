@@ -8,10 +8,23 @@ export default {
     component: AppButton,
     args: {
         children: 'I am button',
+        disabled: false,
+    },
+    argTypes: {
+        variant: {
+            control: false,
+        },
     },
 } as Meta<AppButtonProps>;
 
-const Template: Story<AppButtonProps> = (args) => <AppButton {...args} />;
+export const Default: Story<AppButtonProps> = (args) => <AppButton {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Primary: Story<AppButtonProps> = (args) => <AppButton {...args} />;
+
+Default.args = {
+    variant: 'default',
+};
+
+Primary.args = {
+    variant: 'primary',
+};

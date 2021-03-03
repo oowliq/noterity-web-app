@@ -16,6 +16,7 @@ const base = css`
 
     body {
         background-color: ${(props) => props.theme.pallete.background};
+        font-size: 16px;
     }
 
     html,

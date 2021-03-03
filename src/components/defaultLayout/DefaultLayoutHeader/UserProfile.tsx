@@ -1,3 +1,4 @@
+import AppButton from 'app/components/AppButton';
 import AppLink from 'app/components/AppLink';
 import { PROFILE_ROUTE } from 'app/constants';
 import React, { FC } from 'react';
@@ -67,6 +68,11 @@ const UserProfile: FC = () => (
                 <Email>Konstantin@google.com</Email>
             </Info>
         </User>
+
+        {/* <Auth>
+            <AppButton variant="default">Sign In</AppButton>
+            <AppButton variant="primary">Get started</AppButton>
+        </Auth> */}
     </Box>
 );
 

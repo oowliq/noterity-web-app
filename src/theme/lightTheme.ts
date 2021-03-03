@@ -1,8 +1,9 @@
 import { DefaultTheme } from 'styled-components';
 
 const lightTheme: DefaultTheme = {
+    name: 'Light',
     pallete: {
-        accent: '#f19066',
+        accent: '#6c5ce7',
         main: '#fff',
         background: '#f1f2f6',
         tiny: '#eaeaea',

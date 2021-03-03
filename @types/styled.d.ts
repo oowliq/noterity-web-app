@@ -24,6 +24,7 @@ interface Radius {
 
 declare module 'styled-components' {
     export interface DefaultTheme {
+        name: string;
         pallete: Pallete;
         layout: Layout;
         radius: Radius;
