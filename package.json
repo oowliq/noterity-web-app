@@ -6,9 +6,10 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
+        "lint": "eslint . -c .eslintrc.json --ext ts,tsx --fix",
         "codegen": "graphql-codegen --config codegen.yml",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "storybook:build": "build-storybook"
     },
     "dependencies": {
         "@apollo/client": "^3.3.11",
