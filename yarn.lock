@@ -6179,6 +6179,7 @@ __metadata:
     eslint: ^7.20.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-prettier: ^7.2.0
+    eslint-junit: ^1.0.1
     eslint-plugin-import: ^2.22.1
     eslint-plugin-jsx-a11y: ^6.4.1
     eslint-plugin-prettier: ^3.3.1
@@ -7794,6 +7795,17 @@ __metadata:
     debug: ^2.6.9
     resolve: ^1.13.1
   checksum: 825e34e662c988ece8229e6956a95f12d2fa19265b429e3e3db14e58bfe72e270c999cda0cfc690793ed6e6a3e49ffa8df0e0a8842d668a1f0f7de5ae1aa36f9
+  languageName: node
+  linkType: hard
+
+"eslint-junit@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "eslint-junit@npm:1.0.1"
+  dependencies:
+    mkdirp: ^0.5.1
+    strip-ansi: ^4.0.0
+    xml: ^1.0.1
+  checksum: d150f2f7ad16512d156589b6f1eb1cca9c36748278afcbb0df96e7ab5118420bfc9f86dab4528d2b8c8cfcf2a6cd2a5b5a1e2932753284d6e7a94ef4156057a2
   languageName: node
   linkType: hard
 
@@ -17102,6 +17114,13 @@ typescript@^4.2.2:
     utf-8-validate:
       optional: true
   checksum: 493655b7c4589d09ff3c2b6e8870b9ad7f7aea0aff34034e2dbb9a2e13f6868a47b06b423bc2365aec6143500b04ad24fdaecfbd9a6752f8eab2d339182c9884
+  languageName: node
+  linkType: hard
+
+"xml@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "xml@npm:1.0.1"
+  checksum: adde7652a6f6010d28079586e7f608d616138bcb6c44bbc9174292b5cc2fab09b351d6c5f009e9304df2e0030888198225dd2e9ccbf51b776c8928479bfea4cb
   languageName: node
   linkType: hard
 
