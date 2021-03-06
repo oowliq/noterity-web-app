@@ -6192,6 +6192,7 @@ __metadata:
     polished: ^4.1.1
     react: 17.0.1
     react-dom: 17.0.1
+    react-onclickout: ^2.0.8
     storybook-addon-styled-component-theme: ^1.3.0
     styled-components: ^5.2.1
     styled-media-query: ^2.1.2
@@ -13849,6 +13850,16 @@ fsevents@^1.2.7:
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
   checksum: 82176a55ef7526414d770d5e07dc1d28b4c7f20281f22c6f53f3a98df9dbbb5d70c94bebee57b4ea8ccc2eee430b907ca7b564a42fbdd0ed21e7c43bfee35404
+  languageName: node
+  linkType: hard
+
+"react-onclickout@npm:^2.0.8":
+  version: 2.0.8
+  resolution: "react-onclickout@npm:2.0.8"
+  peerDependencies:
+    react: ^15.x || ^16.x
+    react-dom: ^15.x || ^16.x
+  checksum: 42e1d05011e47e43c738379b85f84b7dab4d616108a4df64b82ecc5731dcff1816a936fa7346fd1bc2262daff32e75407e51b509bc2b403abdee2275c73e121b
   languageName: node
   linkType: hard
 

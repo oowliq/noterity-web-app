@@ -4,9 +4,19 @@ import { darken, lighten } from 'polished';
 
 type AppButtonVariant = 'primary' | 'default';
 
+type AppButtonStyleProps = Pick<AppButtonProps, 'variant' | 'active'>;
+
 export interface AppButtonProps extends HTMLAttributes<HTMLButtonElement> {
     variant?: AppButtonVariant;
+    active?: boolean;
 }
+
+const defaultButtonHoverStyles = css`
+    color: ${(props) => props.theme.pallete.accent};
+    &::before {
+        margin: 2px;
+    }
+`;
 
 const getPrimaryStyles = () => css`
     background-color: ${(props) => props.theme.pallete.accent};
@@ -19,8 +29,8 @@ const getPrimaryStyles = () => css`
     }
 `;
 
-const getVariantStyles = (variant?: AppButtonVariant) => {
-    switch (variant) {
+const getVariantStyles = (dto: AppButtonStyleProps) => {
+    switch (dto.variant) {
         case 'primary':
             return getPrimaryStyles();
         case 'default':
@@ -46,11 +56,10 @@ const getVariantStyles = (variant?: AppButtonVariant) => {
                 }
 
                 &:hover:not(:disabled) {
-                    color: ${(props) => props.theme.pallete.accent};
-                    &::before {
-                        margin: 2px;
-                    }
+                    ${defaultButtonHoverStyles};
                 }
+
+                ${dto.active && defaultButtonHoverStyles};
 
                 &:disabled {
                     background: ${(props) => lighten(0.25, props.theme.pallete.accent)};
@@ -65,7 +74,7 @@ const getVariantStyles = (variant?: AppButtonVariant) => {
     }
 };
 
-const Button = styled.button<Pick<AppButtonProps, 'variant'>>`
+const Button = styled.button<AppButtonStyleProps>`
     position: relative;
     top: 0;
     border-radius: 4px;
@@ -76,10 +85,10 @@ const Button = styled.button<Pick<AppButtonProps, 'variant'>>`
     cursor: pointer;
     transition: top 0.1s ease-in, margin 0.2s ease-in, color 0.2s ease-in;
 
-    &:not(:first-child) {
+    &:not(:first-of-type) {
         margin-left: 0.4em;
     }
-    &:not(:last-child) {
+    &:not(:last-of-type) {
         margin-right: 0.4em;
     }
 
@@ -91,7 +100,7 @@ const Button = styled.button<Pick<AppButtonProps, 'variant'>>`
         cursor: not-allowed;
     }
 
-    ${(props) => getVariantStyles(props.variant)};
+    ${(props) => getVariantStyles(props)};
 `;
 
 const AppButton: FC<AppButtonProps> = ({ variant = 'primary', ...otherProps }) => (
