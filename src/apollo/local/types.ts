@@ -1,3 +1,3 @@
-export interface IsModalShowed {
-    isModalShowed: boolean;
+export interface IsSignInPopoverShowed {
+    isSignInPopoverShowed: boolean;
 }

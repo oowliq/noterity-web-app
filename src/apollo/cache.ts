@@ -1,12 +1,12 @@
 import { InMemoryCache } from '@apollo/client';
-import { isModalShowed } from './local/reactive';
+import { isSignInPopoverShowed } from './local/reactive';
 
 const cache = new InMemoryCache({
     typePolicies: {
         Query: {
             fields: {
-                isModalShowed: {
-                    read: () => isModalShowed(),
+                isSignInPopoverShowed: {
+                    read: () => isSignInPopoverShowed(),
                 },
             },
         },

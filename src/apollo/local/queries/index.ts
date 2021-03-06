@@ -1,1 +1,1 @@
-export * from './IsModalShowed';
+export * from './IsSignInPopoverShowed';

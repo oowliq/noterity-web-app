@@ -129,7 +129,9 @@ const reset = css`
         border-collapse: collapse;
         border-spacing: 0;
     }
-    button {
+    /* Custom */
+    button,
+    input {
         border: none;
         outline: none;
         background: none;

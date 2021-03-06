@@ -1,8 +1,12 @@
+import { useQuery } from '@apollo/client';
+import { IS_SIGN_IN_POPOVER_SHOWED, TOGGLE_SIGN_IN_POPOVER } from 'app/apollo';
+import { IsSignInPopoverShowed } from 'app/apollo/local/types';
 import AppButton from 'app/components/AppButton';
 import AppLink from 'app/components/AppLink';
 import { PROFILE_ROUTE } from 'app/constants';
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { SignInForm } from './SignInForm';
 
 const Box = styled.div``;
 
@@ -55,26 +59,45 @@ const User = styled(AppLink)`
     align-items: center;
 `;
 
-const Auth = styled.div``;
+const Auth = styled.div`
+    position: relative;
+`;
 
-const UserProfile: FC = () => (
-    <Box>
-        {/* <User href={PROFILE_ROUTE}>
-            <AvatarBox>
-                <Avatar src="https://images.unsplash.com/photo-1614432254115-7e756705e910" alt="User avatar" />
-            </AvatarBox>
-            <Info>
-                <FullName>Perov K</FullName>
-                <Email>Konstantin@google.com</Email>
-            </Info>
-        </User> */}
+const UserProfile: FC = () => {
+    const { data: popoverData } = useQuery<IsSignInPopoverShowed>(IS_SIGN_IN_POPOVER_SHOWED);
 
-        <Auth>
-            <AppButton variant="default">Sign In</AppButton>
-            <AppButton variant="primary">Get started</AppButton>
-        </Auth>
-    </Box>
-);
+    const handleToggleSignInPopover = (status?: boolean) =>
+        TOGGLE_SIGN_IN_POPOVER(status ?? !popoverData?.isSignInPopoverShowed);
+
+    return (
+        <Box>
+            {/* <User href={PROFILE_ROUTE}>
+                <AvatarBox>
+                    <Avatar src="https://images.unsplash.com/photo-1614432254115-7e756705e910" alt="User avatar" />
+                </AvatarBox>
+                <Info>
+                    <FullName>Perov K</FullName>
+                    <Email>Konstantin@google.com</Email>
+                </Info>
+            </User> */}
+
+            <Auth>
+                <AppButton
+                    variant="default"
+                    active={!!popoverData?.isSignInPopoverShowed}
+                    onClick={() => handleToggleSignInPopover()}
+                >
+                    Sign In
+                </AppButton>
+                <AppButton variant="primary">Get started</AppButton>
+                <SignInForm
+                    showed={popoverData?.isSignInPopoverShowed}
+                    onClose={() => handleToggleSignInPopover(false)}
+                />
+            </Auth>
+        </Box>
+    );
+};
 
 export { UserProfile };
 export default UserProfile;
