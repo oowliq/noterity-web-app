@@ -59,7 +59,7 @@ const Auth = styled.div``;
 
 const UserProfile: FC = () => (
     <Box>
-        <User href={PROFILE_ROUTE}>
+        {/* <User href={PROFILE_ROUTE}>
             <AvatarBox>
                 <Avatar src="https://images.unsplash.com/photo-1614432254115-7e756705e910" alt="User avatar" />
             </AvatarBox>
@@ -67,12 +67,12 @@ const UserProfile: FC = () => (
                 <FullName>Perov K</FullName>
                 <Email>Konstantin@google.com</Email>
             </Info>
-        </User>
+        </User> */}
 
-        {/* <Auth>
+        <Auth>
             <AppButton variant="default">Sign In</AppButton>
             <AppButton variant="primary">Get started</AppButton>
-        </Auth> */}
+        </Auth>
     </Box>
 );
 
