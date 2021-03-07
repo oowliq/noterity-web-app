@@ -1,11 +1,12 @@
 import { ApolloProvider } from '@apollo/client';
-import { useApollo } from 'app/apollo/client';
-import { lightTheme } from 'app/theme';
-import GlobalStyles from 'app/theme/styles/global';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+
+import { useApollo } from '~app/apollo/client';
+import { lightTheme } from '~app/theme';
+import GlobalStyles from '~app/theme/styles/global';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     const client = useApollo(pageProps.initialApolloState);

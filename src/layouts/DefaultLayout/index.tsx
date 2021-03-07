@@ -1,6 +1,7 @@
-import { DefaultLayoutHeader } from 'app/components/layouts/defaultLayout';
 import React, { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
+
+import { DefaultLayoutHeader } from '~app/components/layouts/defaultLayout';
 
 type DefaultLayoutProps = HTMLAttributes<HTMLDivElement>;
 

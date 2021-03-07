@@ -1,6 +1,7 @@
 import { ApolloQueryResult, NormalizedCacheObject, QueryOptions } from '@apollo/client';
-import { initializeApollo } from 'app/apollo';
 import { NextPageContext } from 'next';
+
+import { initializeApollo } from '~app/apollo';
 
 export interface PageRequestResultProps<TQuery> {
     response: ApolloQueryResult<TQuery>;

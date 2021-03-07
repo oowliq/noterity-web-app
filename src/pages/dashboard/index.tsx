@@ -1,8 +1,9 @@
-import { MetaBlock } from 'app/components/page';
-import { DASHBOARD_PAGE_TITLE } from 'app/constants';
-import DefaultLayout from 'app/layouts/DefaultLayout';
 import { NextPage } from 'next';
 import React from 'react';
+
+import { MetaBlock } from '~app/components/page';
+import { DASHBOARD_PAGE_TITLE } from '~app/constants';
+import DefaultLayout from '~app/layouts/DefaultLayout';
 
 const DashboardPage: NextPage = () => (
     <DefaultLayout>

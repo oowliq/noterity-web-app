@@ -1,7 +1,8 @@
-import { ApolloClient, ApolloLink, HttpLink,NormalizedCacheObject } from '@apollo/client';
-import { APOLLO_ENDPOINT } from 'app/enviroments';
+import { ApolloClient, ApolloLink, HttpLink, NormalizedCacheObject } from '@apollo/client';
 import isomorphicUnfetch from 'isomorphic-unfetch';
 import { useMemo } from 'react';
+
+import { APOLLO_ENDPOINT } from '~app/enviroments';
 
 import cache from './cache';
 

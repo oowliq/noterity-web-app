@@ -1,9 +1,10 @@
 import { useQuery } from '@apollo/client';
-import { IS_SIGN_IN_POPOVER_SHOWED, TOGGLE_SIGN_IN_POPOVER } from 'app/apollo';
-import { IsSignInPopoverShowed } from 'app/apollo/local/types';
-import { Button } from 'app/components/controls';
 import React, { FC } from 'react';
 import styled from 'styled-components';
+
+import { IS_SIGN_IN_POPOVER_SHOWED, TOGGLE_SIGN_IN_POPOVER } from '~app/apollo';
+import { IsSignInPopoverShowed } from '~app/apollo/local/types';
+import { Button } from '~app/components/controls';
 
 import { SignInForm } from './SignInForm';
 
