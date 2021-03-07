@@ -1,12 +1,13 @@
-import React from 'react';
 import { NextPage } from 'next';
-import DefaultLayout from 'app/layouts/DefaultLayout';
-import { PageMeta } from 'app/components';
-import { DASHBOARD_PAGE_TITLE } from 'app/constants';
+import React from 'react';
+
+import { MetaBlock } from '~app/components/page';
+import { DASHBOARD_PAGE_TITLE } from '~app/constants';
+import DefaultLayout from '~app/layouts/DefaultLayout';
 
 const DashboardPage: NextPage = () => (
     <DefaultLayout>
-        <PageMeta title={DASHBOARD_PAGE_TITLE} />
+        <MetaBlock title={DASHBOARD_PAGE_TITLE} />
     </DefaultLayout>
 );
 

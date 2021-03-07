@@ -1,7 +1,7 @@
-import React, { FC, HTMLAttributes } from 'react';
+import React, { FC, InputHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
-export interface FieldProps extends HTMLAttributes<HTMLInputElement> {}
+export type FieldProps = InputHTMLAttributes<HTMLInputElement>;
 
 const Box = styled.div`
     border: 2px solid ${(props) => props.theme.pallete.tiny};
@@ -22,13 +22,11 @@ const Input = styled.input`
     }
 `;
 
-const Field: FC<FieldProps> = (props) => {
-    return (
-        <Box>
-            <Input type="text" {...props} />
-        </Box>
-    );
-};
+const Field: FC<FieldProps> = (props) => (
+    <Box>
+        <Input type="text" {...props} />
+    </Box>
+);
 
 export { Field };
 export default Field;

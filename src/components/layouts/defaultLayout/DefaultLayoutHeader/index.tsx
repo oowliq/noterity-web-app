@@ -1,6 +1,8 @@
-import { Container } from 'app/components/Container';
 import React, { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
+
+import { Container } from '~app/components/layout';
+
 import { Logo } from './Logo';
 import { UserProfile } from './UserProfile';
 

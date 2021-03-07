@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { reset, base } from './partials';
+
+import { base,reset } from './partials';
 
 const GlobalStyles = createGlobalStyle`
     ${reset};

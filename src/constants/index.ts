@@ -1,2 +1,2 @@
-export * from './titles';
 export * from './routes';
+export * from './titles';
