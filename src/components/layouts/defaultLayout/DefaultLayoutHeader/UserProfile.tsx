@@ -1,11 +1,10 @@
 import { useQuery } from '@apollo/client';
 import { IS_SIGN_IN_POPOVER_SHOWED, TOGGLE_SIGN_IN_POPOVER } from 'app/apollo';
 import { IsSignInPopoverShowed } from 'app/apollo/local/types';
-import AppButton from 'app/components/AppButton';
-import AppLink from 'app/components/AppLink';
-import { PROFILE_ROUTE } from 'app/constants';
+import { Button } from 'app/components/controls';
 import React, { FC } from 'react';
 import styled from 'styled-components';
+
 import { SignInForm } from './SignInForm';
 
 const Box = styled.div``;
@@ -54,7 +53,7 @@ const Info = styled.div`
     }
 `;
 
-const User = styled(AppLink)`
+const User = styled.div`
     display: flex;
     align-items: center;
 `;
@@ -82,14 +81,14 @@ const UserProfile: FC = () => {
             </User> */}
 
             <Auth>
-                <AppButton
+                <Button
                     variant="default"
                     active={!!popoverData?.isSignInPopoverShowed}
                     onClick={() => handleToggleSignInPopover()}
                 >
                     Sign In
-                </AppButton>
-                <AppButton variant="primary">Get started</AppButton>
+                </Button>
+                <Button variant="primary">Get started</Button>
                 <SignInForm
                     showed={popoverData?.isSignInPopoverShowed}
                     onClose={() => handleToggleSignInPopover(false)}

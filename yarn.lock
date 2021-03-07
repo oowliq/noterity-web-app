@@ -6184,6 +6184,7 @@ __metadata:
     eslint-plugin-jsx-a11y: ^6.4.1
     eslint-plugin-prettier: ^3.3.1
     eslint-plugin-react: ^7.22.0
+    eslint-plugin-simple-import-sort: ^7.0.0
     eslint-plugin-unused-imports: ^1.1.0
     graphql: ^15.5.0
     isomorphic-unfetch: ^3.1.0
@@ -7897,6 +7898,15 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7
   checksum: 34927cb4880984e3a3e413ef57ebedbc4c4bf8e26f3cf561986e240c621d0873765fc5eef2be22171625deab2f77d0ec7013b422987ae5296fbdee0c682c6cc5
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-simple-import-sort@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "eslint-plugin-simple-import-sort@npm:7.0.0"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 51fc6b675220681fd88e8fb7c0b9ff9b3b38e2c060999c72da7b0dee469cfe3fdbe1284374f2ade5015ee93d4d59eaf2d29c6185d4131b30aa057d9c9dec9483
   languageName: node
   linkType: hard
 

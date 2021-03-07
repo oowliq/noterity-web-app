@@ -1,4 +1,5 @@
 import { InMemoryCache } from '@apollo/client';
+
 import { isSignInPopoverShowed } from './local/reactive';
 
 const cache = new InMemoryCache({

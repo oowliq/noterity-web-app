@@ -20,7 +20,7 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint", "prettier", "unused-imports"],
+    "plugins": ["react", "@typescript-eslint", "prettier", "unused-imports", "simple-import-sort"],
     "settings": {
         "import/resolver": {
             "node": {
@@ -29,6 +29,8 @@
         }
     },
     "rules": {
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
         "no-use-before-define": 0,
         "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
         "react/jsx-props-no-spreading": 0,

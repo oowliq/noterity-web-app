@@ -1,15 +1,17 @@
-import React, { FC, HTMLAttributes } from 'react';
-import styled, { css } from 'styled-components';
 import { darken, lighten } from 'polished';
+import React, { ButtonHTMLAttributes, FC } from 'react';
+import styled, { css } from 'styled-components';
 
-type AppButtonVariant = 'primary' | 'default';
+type ButtonVariant = 'primary' | 'default';
 
-type AppButtonStyleProps = Pick<AppButtonProps, 'variant' | 'active'>;
+type ButtonStyleProps = Pick<ButtonProps, 'variant' | 'active'>;
 
-export interface AppButtonProps extends HTMLAttributes<HTMLButtonElement> {
-    variant?: AppButtonVariant;
+interface ButtonAdditionalProps {
+    variant?: ButtonVariant;
     active?: boolean;
 }
+
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & ButtonAdditionalProps;
 
 const defaultButtonHoverStyles = css`
     color: ${(props) => props.theme.pallete.accent};
@@ -29,7 +31,7 @@ const getPrimaryStyles = () => css`
     }
 `;
 
-const getVariantStyles = (dto: AppButtonStyleProps) => {
+const getVariantStyles = (dto: ButtonStyleProps) => {
     switch (dto.variant) {
         case 'primary':
             return getPrimaryStyles();
@@ -74,7 +76,7 @@ const getVariantStyles = (dto: AppButtonStyleProps) => {
     }
 };
 
-const Button = styled.button<AppButtonStyleProps>`
+const StyledButton = styled.button<ButtonStyleProps>`
     position: relative;
     top: 0;
     border-radius: 4px;
@@ -103,9 +105,9 @@ const Button = styled.button<AppButtonStyleProps>`
     ${(props) => getVariantStyles(props)};
 `;
 
-const AppButton: FC<AppButtonProps> = ({ variant = 'primary', ...otherProps }) => (
-    <Button {...otherProps} variant={variant} />
+const Button: FC<ButtonProps> = ({ variant = 'primary', active, ...otherProps }) => (
+    <StyledButton variant={variant} active={active} {...otherProps} />
 );
 
-export { AppButton };
-export default AppButton;
+export { Button };
+export default Button;

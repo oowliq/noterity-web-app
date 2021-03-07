@@ -1,5 +1,5 @@
+import Document, { DocumentContext, DocumentInitialProps,Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {

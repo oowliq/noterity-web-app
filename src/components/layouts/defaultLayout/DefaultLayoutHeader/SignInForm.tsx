@@ -1,11 +1,9 @@
+import { Box } from 'app/components/containers';
+import { Button } from 'app/components/controls';
+import { Field, Group,Label } from 'app/components/forms';
 import React, { ChangeEvent, FC, HTMLAttributes, useEffect, useState } from 'react';
 import ClickOutHandler from 'react-onclickout';
-import Box from 'app/components/Box';
 import styled from 'styled-components';
-import Field from 'app/components/Field';
-import FormGroup from 'app/components/FormGroup';
-import AppButton from 'app/components/AppButton';
-import FormLabel from 'app/components/FormLabel';
 
 interface SignInFormProps extends HTMLAttributes<HTMLDivElement> {
     showed?: boolean;
@@ -37,19 +35,19 @@ const SignInForm: FC<SignInFormProps> = ({ showed, onClose, ...otherProps }) => 
             }}
         >
             <Wrapper {...otherProps}>
-                <FormGroup>
-                    <FormLabel htmlFor="sign-in-form-email">Email</FormLabel>
+                <Group>
+                    <Label htmlFor="sign-in-form-email">Email</Label>
                     <Field id="sign-in-form-email" type="text" value={emailValue} onChange={handleInputChange} />
-                </FormGroup>
-                <FormGroup>
-                    <FormLabel htmlFor="sign-in-form-password">Password</FormLabel>
+                </Group>
+                <Group>
+                    <Label htmlFor="sign-in-form-password">Password</Label>
                     <Field id="sign-in-form-password" type="password" />
-                </FormGroup>
-                <FormGroup>
-                    <AppButton variant="primary" disabled={disabled}>
+                </Group>
+                <Group>
+                    <Button variant="primary" disabled={disabled}>
                         Continue
-                    </AppButton>
-                </FormGroup>
+                    </Button>
+                </Group>
             </Wrapper>
         </ClickOutHandler>
     ) : null;

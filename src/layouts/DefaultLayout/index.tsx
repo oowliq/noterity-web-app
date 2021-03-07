@@ -1,4 +1,4 @@
-import { DefaultLayoutHeader } from 'app/components';
+import { DefaultLayoutHeader } from 'app/components/layouts/defaultLayout';
 import React, { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
 
